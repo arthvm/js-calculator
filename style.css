@@ -1,0 +1,100 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  font: Helvetica, Arial, san-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #4e4e4e;
+}
+
+.header {
+  color: white;
+}
+
+.calculator-container {
+  border: 2px solid #414141;
+  border-radius: 20px;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: stretch;
+  padding: 30px;
+  padding-bottom: 50px;
+  min-width: 200px;
+  height: 480px;
+}
+
+.display {
+  text-align: end;
+  font-size: 26px;
+  padding-right: 50px;
+  color: white;
+}
+
+.buttons {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-container {
+  display: flex;
+  gap: 8px;
+}
+
+.input-btn {
+  font-size: 21px;
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  cursor: pointer;
+  color: white;
+}
+
+.operand-btn {
+  border: 1px solid #4e4e4e;
+  background-color: #4e4e4e;
+}
+
+.operand-btn:active {
+  border: 1px solid #6d6d6d;
+  background-color: #6d6d6d;
+}
+
+[data-num="0"] {
+  text-align: left;
+  padding-left: 26px;
+  width: 138px;
+  border-radius: 500px;
+}
+
+.special-btn {
+  color: black;
+  background-color: #9b9b9b;
+  border: 1px solid #9b9b9b;
+}
+
+.special-btn:active {
+  background-color: #cccccc;
+  border: 1px solid #cccccc;
+}
+
+.operator-btn {
+  background-color: rgb(231, 165, 43);
+  border: 1px solid rgb(231, 165, 43);
+}
+
+.operator-btn.active {
+  color: rgb(231, 165, 43);
+  background-color: white;
+  border: 1px solid white;
+}

@@ -4,6 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/a5cb30fd77.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
     <title>Calculator</title>
 </head>
 
@@ -13,38 +15,44 @@
     </header>
     <div class="calculator-container">
         <div class="display">
-            <div class="display-text">0</div>
+            <h2 class="display-text">0</h2>
         </div>
         <div class="buttons">
-            <div class="special-btns">
+            <div class="btn-container">
                 <button class="input-btn special-btn">AC</button>
                 <button class="input-btn special-btn">+/-</button>
                 <button class="input-btn special-btn">%</button>
+                <button class="input-btn operator-btn">÷</button>
             </div>
-            <div class="operand-btns">
-                <button class="input-btn operand-btn">.</button>
-                <button class="input-btn operand-btn">0</button>
-                <button class="input-btn operand-btn">1</button>
-                <button class="input-btn operand-btn">2</button>
-                <button class="input-btn operand-btn">3</button>
-                <button class="input-btn operand-btn">4</button>
-                <button class="input-btn operand-btn">5</button>
-                <button class="input-btn operand-btn">6</button>
+            <div class="btn-container">
                 <button class="input-btn operand-btn">7</button>
                 <button class="input-btn operand-btn">8</button>
                 <button class="input-btn operand-btn">9</button>
+                <button class="input-btn operator-btn">x</button>
             </div>
-            <div class="operator-btns">
-                <button class="input-btn operator-btn">=</button>
-                <button class="input-btn operator-btn">+</button>
+            <div class="btn-container">
+                <button class="input-btn operand-btn">4</button>
+                <button class="input-btn operand-btn">5</button>
+                <button class="input-btn operand-btn">6</button>
                 <button class="input-btn operator-btn">-</button>
-                <button class="input-btn operator-btn">X</button>
-                <button class="input-btn operator-btn">%</button>
+            </div>
+            <div class="btn-container">
+                <button class="input-btn operand-btn">1</button>
+                <button class="input-btn operand-btn">2</button>
+                <button class="input-btn operand-btn">3</button>
+                <button class="input-btn operator-btn">+</button>
+            </div>
+            <div class="btn-container">
+                <button class="input-btn operand-btn" data-num="0">0</button>
+                <button class="input-btn operand-btn">.</button>
+                <button class="input-btn operator-btn">=</button>
             </div>
         </div>
     </div>
     <footer>
-
+        <a href="https://github.com/arthvm/js-calculator" target="_blank" rel=”noopener noreferrer” class="repo-link">
+            <i class="fa-brands fa-github repo-icon fa-2x" style="color: #ffffff;"></i>
+        </a>
     </footer>
 </body>
 
