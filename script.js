@@ -21,13 +21,18 @@ equalBtn.addEventListener("click", () => {
   OnEqualityButton();
 });
 
+const clearBtn = document.querySelector("[data-clear]");
+clearBtn.addEventListener("click", () => {
+  OnClear();
+});
 const displayText = document.querySelector(".display-text");
 let firstOperand,
   secondOperand,
   operator,
-  displayValue,
+  displayValue = 0,
   isOperating = false,
-  hasReset = true;
+  hasReset = true,
+  mayHardClear = true;
 
 let lastOperation = {
   operand: null,
@@ -66,10 +71,17 @@ function OnEqualityButton() {
 
 function GetFirstOperand() {
   firstOperand = +displayValue;
+  mayHardClear = false;
 }
 
 function GetSecondOperand() {
   secondOperand = +displayValue;
+}
+
+function ClearDisplay() {
+  displayValue = 0;
+  UpdateDisplay(displayValue);
+  hasReset = true;
 }
 
 function ResetDisplay() {
@@ -100,7 +112,6 @@ function Operate() {
       break;
   }
 
-  console.log(result);
   SetLastOperation();
   ResetOperands();
   ResetDisplay();
@@ -131,6 +142,31 @@ function RepeatOperation() {
 
   ResetDisplay();
   UpdateDisplay(result);
+}
+
+function OnClear() {
+  if (mayHardClear) {
+    HardClear();
+  } else {
+    SoftClear();
+  }
+}
+
+function SoftClear() {
+  mayHardClear = true;
+  ClearDisplay();
+}
+
+function HardClear() {
+  ResetOperands();
+  operator = null;
+  displayValue = null;
+  isOperating = false;
+  hasReset = true;
+  mayHardClear = true;
+  lastOperation["lastOperator"] = null;
+  lastOperation["operand"] = null;
+  displayText.textContent = 0;
 }
 
 /***************************************************************MATH FUNCTIONS************************************************************/

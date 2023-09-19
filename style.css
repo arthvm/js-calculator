@@ -60,12 +60,14 @@ body {
   color: white;
 }
 
-.operand-btn {
+.operand-btn,
+[data-float] {
   border: 1px solid #4e4e4e;
   background-color: #4e4e4e;
 }
 
-.operand-btn:active {
+.operand-btn:active,
+[data-float]:active {
   border: 1px solid #6d6d6d;
   background-color: #6d6d6d;
 }
