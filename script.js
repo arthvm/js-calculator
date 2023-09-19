@@ -31,6 +31,11 @@ signalBtn.addEventListener("click", () => {
   RevertSign();
 });
 
+const percentageBtn = document.querySelector("[data-percentage]");
+percentageBtn.addEventListener("click", () => {
+  Percentage();
+});
+
 const displayText = document.querySelector(".display-text");
 let firstOperand,
   secondOperand,
@@ -178,6 +183,12 @@ function HardClear() {
 
 function RevertSign() {
   displayValue = displayValue * -1;
+  hasReset = true;
+  UpdateDisplay(displayValue);
+}
+
+function Percentage() {
+  displayValue = displayValue / 100;
   hasReset = true;
   UpdateDisplay(displayValue);
 }
