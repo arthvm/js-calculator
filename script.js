@@ -52,7 +52,6 @@ function UpdateDisplay(newValue) {
 
 function OnOperatorFocus(currentOperator) {
   if (isOperating) {
-    isOperating = false;
     Operate();
   }
   operator = currentOperator;
@@ -62,8 +61,10 @@ function OnOperatorFocus(currentOperator) {
 }
 
 function OnEqualityButton() {
-  if (firstOperand == null && secondOperand == null) {
+  if (firstOperand == null && secondOperand == null && operator != null) {
     RepeatOperation();
+  } else if (operator == null) {
+    HardClear();
   } else {
     Operate();
   }
@@ -112,6 +113,7 @@ function Operate() {
       break;
   }
 
+  isOperating = false;
   SetLastOperation();
   ResetOperands();
   ResetDisplay();
@@ -159,7 +161,6 @@ function SoftClear() {
 
 function HardClear() {
   ResetOperands();
-  operator = null;
   displayValue = null;
   isOperating = false;
   hasReset = true;
