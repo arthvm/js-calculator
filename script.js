@@ -25,6 +25,12 @@ const clearBtn = document.querySelector("[data-clear]");
 clearBtn.addEventListener("click", () => {
   OnClear();
 });
+
+const signalBtn = document.querySelector("[data-signal]");
+signalBtn.addEventListener("click", () => {
+  RevertSign();
+});
+
 const displayText = document.querySelector(".display-text");
 let firstOperand,
   secondOperand,
@@ -168,6 +174,12 @@ function HardClear() {
   lastOperation["lastOperator"] = null;
   lastOperation["operand"] = null;
   displayText.textContent = 0;
+}
+
+function RevertSign() {
+  displayValue = displayValue * -1;
+  hasReset = true;
+  UpdateDisplay(displayValue);
 }
 
 /***************************************************************MATH FUNCTIONS************************************************************/
