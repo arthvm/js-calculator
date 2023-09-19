@@ -88,12 +88,14 @@ body {
   border: 1px solid #cccccc;
 }
 
-.operator-btn {
+.operator-btn,
+[data-equal] {
   background-color: rgb(231, 165, 43);
   border: 1px solid rgb(231, 165, 43);
 }
 
-.operator-btn.active {
+.operator-btn.active,
+[data-equal].active {
   color: rgb(231, 165, 43);
   background-color: white;
   border: 1px solid white;

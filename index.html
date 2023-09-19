@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/a5cb30fd77.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="style.css">
+    <script src="/script.js" defer></script>
+    <link rel="stylesheet" href="/style.css">
     <title>Calculator</title>
 </head>
 
@@ -19,33 +20,33 @@
         </div>
         <div class="buttons">
             <div class="btn-container">
-                <button class="input-btn special-btn">AC</button>
-                <button class="input-btn special-btn">+/-</button>
-                <button class="input-btn special-btn">%</button>
-                <button class="input-btn operator-btn">÷</button>
+                <button class="input-btn special-btn" data-type="special" data-clear>AC</button>
+                <button class="input-btn special-btn" data-type="special" data-signal>+/-</button>
+                <button class="input-btn special-btn" data-type="special" data-percentage>%</button>
+                <button class="input-btn operator-btn" data-type="operator" data-operator="divide">÷</button>
             </div>
             <div class="btn-container">
-                <button class="input-btn operand-btn">7</button>
-                <button class="input-btn operand-btn">8</button>
-                <button class="input-btn operand-btn">9</button>
-                <button class="input-btn operator-btn">x</button>
+                <button class="input-btn operand-btn" data-type="operand" data-num="7">7</button>
+                <button class="input-btn operand-btn" data-type="operand" data-num="8">8</button>
+                <button class="input-btn operand-btn" data-type="operand" data-num="9">9</button>
+                <button class="input-btn operator-btn" data-type="operator" data-operator="multiply">x</button>
             </div>
             <div class="btn-container">
-                <button class="input-btn operand-btn">4</button>
-                <button class="input-btn operand-btn">5</button>
-                <button class="input-btn operand-btn">6</button>
-                <button class="input-btn operator-btn">-</button>
+                <button class="input-btn operand-btn" data-type="operand" data-num="4">4</button>
+                <button class="input-btn operand-btn" data-type="operand" data-num="5">5</button>
+                <button class="input-btn operand-btn" data-type="operand" data-num="6">6</button>
+                <button class="input-btn operator-btn" data-type="operator" data-operator="subtract">-</button>
             </div>
             <div class="btn-container">
-                <button class="input-btn operand-btn">1</button>
-                <button class="input-btn operand-btn">2</button>
-                <button class="input-btn operand-btn">3</button>
-                <button class="input-btn operator-btn">+</button>
+                <button class="input-btn operand-btn" data-type="operand" data-num="1">1</button>
+                <button class="input-btn operand-btn" data-type="operand" data-num="2">2</button>
+                <button class="input-btn operand-btn" data-type="operand" data-num="3">3</button>
+                <button class="input-btn operator-btn" data-type="operator" data-operator="add">+</button>
             </div>
             <div class="btn-container">
-                <button class="input-btn operand-btn" data-num="0">0</button>
-                <button class="input-btn operand-btn">.</button>
-                <button class="input-btn operator-btn">=</button>
+                <button class="input-btn operand-btn" data-type="operand" data-num="0">0</button>
+                <button class="input-btn operand-btn" data-type="float" data-float>.</button>
+                <button class="input-btn" data-type="equal" data-equal>=</button>
             </div>
         </div>
     </div>
