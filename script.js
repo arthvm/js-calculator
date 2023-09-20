@@ -61,7 +61,9 @@ function UpdateDisplay(newValue) {
     displayValue = newValue;
     displayText.textContent = displayValue;
   } else {
-    displayValue += newValue;
+    if (displayValue.length < 9) {
+      displayValue += newValue;
+    }
     displayText.textContent = displayValue;
   }
 }
