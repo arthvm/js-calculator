@@ -36,6 +36,11 @@ percentageBtn.addEventListener("click", () => {
   Percentage();
 });
 
+const floatBtn = document.querySelector("[data-float]");
+floatBtn.addEventListener("click", () => {
+  MakeAFloat();
+});
+
 const displayText = document.querySelector(".display-text");
 let firstOperand,
   secondOperand,
@@ -124,6 +129,7 @@ function Operate() {
       break;
   }
 
+  result = result.round(5);
   isOperating = false;
   SetLastOperation();
   ResetOperands();
@@ -153,6 +159,8 @@ function RepeatOperation() {
       break;
   }
 
+  result = result.round(5);
+  console.log(result);
   ResetDisplay();
   UpdateDisplay(result);
 }
@@ -193,6 +201,12 @@ function Percentage() {
   UpdateDisplay(displayValue);
 }
 
+function MakeAFloat() {
+  if (!displayValue.includes(".")) {
+    displayValue += ".";
+  }
+}
+
 /***************************************************************MATH FUNCTIONS************************************************************/
 
 function Add(num1, num2) {
@@ -210,3 +224,8 @@ function Divide(num1, num2) {
   }
   return num1 / num2;
 }
+
+Number.prototype.round = function (n) {
+  const power = Math.pow(10, n);
+  return Math.round((this + Number.EPSILON) * power) / power;
+};
